@@ -1,0 +1,107 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* Definição das variáveis de cores */
+:root {
+    --cor-primaria: #1dc4bb; /* Cor primária */
+    --cor-secundaria: #276e2d; /* Cor secundária */
+    --cor-destaque: #cbf1cb; /* Cor de destaque */
+    --cor-planoDeFundo: #8FBC8F; /* Cor plano de fundo section */
+  }
+
+  /* Estilo do cabeçalho */
+header {
+    background-color: var(--cor-destaque) ;
+    color: var(--cor-secundaria);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+  
+  }
+  
+  /* Estilo da navegação */
+  nav {
+    background-color: var(--cor-secundaria);
+    padding: 10px;
+    text-align: center; /* Alinha os links ao centro */
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px; /* Adiciona margem horizontal entre os links */
+  }
+  
+  /* Estilo do conteúdo */
+section {
+    padding: 20px;
+    background-color: var(--cor-planoDeFundo);
+    text-align: center;
+    text-decoration: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  h1 {
+    margin-top: 30px; /* Ajusta a margem superior do h1 para aumentar a distância do separador */
+}
+
+  .separador {
+    border-top: 1px solid black; /* Define uma linha sólida de 1 pixel com a cor cinza */
+    margin-top: 30px; /* Define uma margem superior para espaçamento entre os elementos */
+    margin-bottom: 30px; /* Define uma margem inferior para espaçamento entre os elementos */
+}
+
+form {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+  
+
+  /* Estilo do rodapé */
+footer {
+    background-color: var(--cor-secundaria);
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
