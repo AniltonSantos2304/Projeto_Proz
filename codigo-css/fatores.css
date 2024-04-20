@@ -51,13 +51,22 @@
         text-decoration: none;
     }
 
+    .primeira, img {
+        text-align: center;
+        font-size: 20px;
+        background-color: var(--cor-destaque);
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
     h1 {
         margin-top: 30px; /* Ajusta a margem superior do h1 para aumentar a distância do separador */
     }
 
-    #img {
+    img {
         flex-shrink: 0; /* Evita que a imagem diminua para caber no contêiner */
-        margin-right: 100px; /* Adiciona margem à direita da imagem para separá-la do texto */
         border-radius: 10px;
     }
     #tópicos {
