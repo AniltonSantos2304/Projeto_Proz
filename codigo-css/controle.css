@@ -60,10 +60,24 @@ section {
     margin-top: 30px; /* Ajusta a margem superior do h1 para aumentar a distância do separador */
 }
 
-  .separador {
-    border-top: 1px solid black; /* Define uma linha sólida de 1 pixel com a cor cinza */
-    margin-top: 30px; /* Define uma margem superior para espaçamento entre os elementos */
-    margin-bottom: 30px; /* Define uma margem inferior para espaçamento entre os elementos */
+.primeira {
+  text-align: center;
+  font-size: 20px;
+  background-color: var(--cor-destaque);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.segunda {
+  text-align: center;
+  font-size: 20px;
+  background-color: var(--cor-destaque);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 form {
@@ -95,8 +109,6 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #45a049;
 }
-
-  
 
   /* Estilo do rodapé */
 footer {
