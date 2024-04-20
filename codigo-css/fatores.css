@@ -1,83 +1,99 @@
 /* Reset de estilos */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-    /* Definição das variáveis de cores */
-    :root {
-        --cor-primaria: #1dc4bb; /* Cor primária */
-        --cor-secundaria: #276e2d; /* Cor secundária */
-        --cor-destaque: #cbf1cb; /* Cor de destaque */
-        --cor-planoDeFundo: #8FBC8F; /* Cor plano de fundo section */
-    }
+/* Definição das variáveis de cores */
+:root {
+    --cor-primaria: #1dc4bb; /* Cor primária */
+    --cor-secundaria: #276e2d; /* Cor secundária */
+    --cor-destaque: #cbf1cb; /* Cor de destaque */
+    --cor-planoDeFundo: #8FBC8F; /* Cor plano de fundo section */
+}
 
-    /* Estilo do cabeçalho */
-    header {
-        background-color: var(--cor-destaque) ;
-        color: var(--cor-secundaria);
-        padding: 20px;
-        text-align: center;
-    }
+/* Estilo do cabeçalho */
+header {
+    background-color: var(--cor-destaque) ;
+    color: var(--cor-secundaria);
+    padding: 20px;
+    text-align: center;
+}
+  
+.logo {
+width: 200px;
+height: auto;
+margin-bottom: 20px;
+
+}
     
-    .logo {
-        width: 200px;
-        height: auto;
-        margin-bottom: 20px;
-    
-    }
-    
-    /* Estilo da navegação */
-    nav {
-        background-color: var(--cor-secundaria);
-        padding: 10px;
-        text-align: center; /* Alinha os links ao centro */
-    }
-    
-    nav a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        margin: 0 10px; /* Adiciona margem horizontal entre os links */
-    }
-    
-    /* Estilo do conteúdo */
-    section {
-        padding: 20px;
-        background-color: var(--cor-planoDeFundo);
-        text-align: center;
-        text-decoration: none;
-    }
+/* Estilo da navegação */
+nav {
+    background-color: var(--cor-secundaria);
+    padding: 10px;
+    text-align: center; /* Alinha os links ao centro */
+}
 
-    .primeira, img {
-        text-align: center;
-        font-size: 20px;
-        background-color: var(--cor-destaque);
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
-    }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px; /* Adiciona margem horizontal entre os links */
+}
 
-    h1 {
-        margin-top: 30px; /* Ajusta a margem superior do h1 para aumentar a distância do separador */
-    }
+/* Estilo do conteúdo */
+section {
+    padding: 20px;
+    background-color: var(--cor-planoDeFundo);
+    text-align: center;
+    text-decoration: none;
+}
 
-    img {
-        flex-shrink: 0; /* Evita que a imagem diminua para caber no contêiner */
-        border-radius: 10px;
-    }
-    #tópicos {
-        text-decoration: none;
+.primeira {
+    text-align: left;
+    font-size: 20px;
+    background-color: var(--cor-destaque);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
 
-    }  
+.h1 {
+    margin-top: 30px; /* Ajusta a margem superior do h1 para aumentar a distância do separador */
+    text-align: center;
+}
 
-    /* Estilo do rodapé */
-    footer {
-        background-color: var(--cor-secundaria);
-        color: white;
-        text-align: center;
-        padding: 10px;
-    }
+img {
+    width: 60%;
+    flex-shrink: 0; /* Evita que a imagem diminua para caber no contêiner */
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#img-2 {
+    flex-shrink: 0; /* Evita que a imagem diminua para caber no contêiner */
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+ul {
+    list-style-position: inside;
+    text-align: left;
+
+}  
+
+/* Estilo do rodapé */
+footer {
+    background-color: var(--cor-secundaria);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
