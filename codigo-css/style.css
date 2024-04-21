@@ -66,19 +66,8 @@ section {
 .primeiroParagrafo p {
   font-size: 20px; /* Ajuste o tamanho do texto conforme necessário */
   border: 1px solid #ccc; /* Adiciona uma borda sólida de 1px com cor cinza */
-  padding: 10px; /* Adiciona um preenchimento interno de 10px para separar o texto da borda */
+  padding: 20px; /* Adiciona um preenchimento interno de 10px para separar o texto da borda */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra com deslocamento de 2px na horizontal, 2px na vertical, desfoque de 5px e cor preta com transparência de 0.1 */
-  background-color: #f3ebeb;
-  border-radius: 10px;
-}
-
-.segundoParagrafo {
-  text-align: center;
-  margin-bottom: 20px; /* Aumenta a distância entre a classe1 e a próxima classe */
-  font-size: 20px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   background-color: #f3ebeb;
   border-radius: 10px;
 }
@@ -91,6 +80,7 @@ section {
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  padding: 20px;
 }
 
 .terceiroParagrafo img {
@@ -135,7 +125,7 @@ section {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   color: white;
-  padding: 10px;
+  padding: 20px;
 }
 
 a {
@@ -143,6 +133,43 @@ a {
   color: white;
   padding: 10px;
 }
+
+form {
+  background-color: #f2f2f2;
+  padding: 0px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: auto;
+  max-width: 400px;
+  text-align: center;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+  width: 50%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  }
+  
+  input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+  background-color: #45a049;
+  }
+
+  .h2-forms {
+    text-align: center;
+  }
 
 
 /* Estilo do rodapé */
