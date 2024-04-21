@@ -52,23 +52,29 @@ section {
 }
 
 .primeira {
-    text-align: center;
+    text-align: left;
     font-size: 20px;
     background-color: var(--cor-destaque);
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    padding: 20px;
 }
 
 .segunda {
-    text-align: center;
+    text-align: left;
     font-size: 20px;
     background-color: var(--cor-destaque);
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
 }
 
 /* Estilo do rodapé */

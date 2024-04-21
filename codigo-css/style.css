@@ -66,7 +66,7 @@ section {
 .primeiroParagrafo p {
   font-size: 20px; /* Ajuste o tamanho do texto conforme necessário */
   border: 1px solid #ccc; /* Adiciona uma borda sólida de 1px com cor cinza */
-  padding: 10px; /* Adiciona um preenchimento interno de 10px para separar o texto da borda */
+  padding: 20px; /* Adiciona um preenchimento interno de 10px para separar o texto da borda */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra com deslocamento de 2px na horizontal, 2px na vertical, desfoque de 5px e cor preta com transparência de 0.1 */
   background-color: #f3ebeb;
   border-radius: 10px;
@@ -80,6 +80,7 @@ section {
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  padding: 20px;
 }
 
 .terceiroParagrafo img {
@@ -124,7 +125,7 @@ section {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   color: white;
-  padding: 10px;
+  padding: 20px;
 }
 
 a {

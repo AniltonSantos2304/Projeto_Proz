@@ -26,7 +26,6 @@ text-align: center;
 width: 200px;
 height: auto;
 margin-bottom: 20px;
-
 }
 
 /* Estilo da navegação */
@@ -72,6 +71,7 @@ border: 1px solid #ccc;
 border-radius: 10px;
 box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 margin-bottom: 20px;
+padding: 20px;
 }
 
 .segunda {
@@ -82,6 +82,7 @@ border: 1px solid #ccc;
 border-radius: 10px;
 box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 margin-bottom: 20px;
+padding: 20px;
 }
 
 /* Estilo do rodapé */
