@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="/Projeto_Proz/codigo-css/o-que-sao-dcnts.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="/Projeto_Proz/codigo-javascript/index.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>  
 
   </head>
   <body>
@@ -21,17 +25,17 @@
         <a href="./controle-e-tratamento.html">Controle e Tratamento</a>
         <a href="./fatores-de-risco.html">Fatores de Risco</a>
         <a href="./o-que-sao-dcnts.html">O que são DCTNs?</a>
-        <a href="./prenvencao.html">Prevenção</a>
+        <a href="./prevencao.html">Prevenção</a>
       </div>
     </nav>
     <main>
       <section>
 
-        <div class="card bg-dark text-black">
-          <img class="card-img" src="/Projeto_Proz/imagem/doencas-cronicas-adultos.jpg" alt="Imagem do card">
+        <div id="texto" class="card bg-dark text-black">
+          <img class="card-img original-img" src="/Projeto_Proz/imagem/doencas-cronicas-adultos.jpg" alt="Imagem do card">
           <div class="card-img-overlay">
-            <h3 class="card-title">O que são as DCNT (Doenças Crônicas Não Transmissíveis)?</h3>
-            <p class="card-text">As DCNT representam mais de 62% das mortes em todo o país, de acordo
+            <h3>O que são as DCNT (Doenças Crônicas Não Transmissíveis)?</h3>
+            <p>As DCNT representam mais de 62% das mortes em todo o país, de acordo
               com estudos da OMS (Organização Mundial da Saúde). Elas surgem em
               todos os lugares do mundo em decorrência da transição demográfica,
               epidemiológica e nutricional, além dos processos de urbanização e de
@@ -57,7 +61,7 @@
               <br>
               <br>
               <br>
-            <h3 class="card-title">Prevenção de DCNT e a redução de custos em saúde pública.</h3>
+            <h3>Prevenção de DCNT e a redução de custos em saúde pública.</h3>
             <p>
               Conhecidas pela sigla DCNT, as Doenças Crônicas Não Transmissíveis
               estão entre as principais causas de morte no Brasil e no mundo, de
@@ -122,28 +126,69 @@
         </div>
         <br>
         <br>
-
-        <!-- Forms footer -->
-        <div class="container">
-          <form class="forms-rodape" action="enviar_depoimento.php" method="post">
-            <h5>Assine a newsletter do Mais Vida e fique por dentro!</h5>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
-            <br>
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu endereço de e-mail" required>
-            <br>
-            <br>
-            <button type="submit">Enviar</button>
-          </form>
-        </div>
-
       </section>
 
     </main>
 
       <footer>
+        <!-- Forms footer -->
+        <div class="container">
+          <form id="form-newsletter" class="forms-rodape needs-validation" action="enviar_depoimento.php" method="post" novalidate>
+            <h5>Assine a newsletter do Mais Vida e fique por dentro!</h5>
+            <div class="form-group">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome" required>
+              <div class="invalid-feedback">
+                Nome é obrigatório.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu endereço de e-mail" required>
+              <div class="invalid-feedback">
+                Email inválido.
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary"style="background-color: green;">Enviar</button>
+          </form>
+        </div>
         
+        <script>
+          // Utilizando JavaScript para adicionar validação de formulário
+          (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+              // Busca por formulários com a classe "needs-validation" e previne seu envio caso eles não sejam válidos
+              var forms = document.getElementsByClassName('needs-validation');
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+        
+                  // Itera sobre todos os campos do formulário
+                  var inputs = form.querySelectorAll('input');
+                  inputs.forEach(function(input) {
+                    input.addEventListener('input', function() {
+                      // Remove a mensagem de erro se o campo for válido
+                      if (input.checkValidity()) {
+                        input.classList.remove('is-invalid');
+                        input.nextElementSibling.textContent = '';
+                      } else {
+                        // Adiciona a mensagem de erro se o campo for inválido
+                        input.classList.add('is-invalid');
+                        input.nextElementSibling.textContent = input.validationMessage;
+                      }
+                    });
+                  });
+                }, false);
+              });
+            }, false);
+          })();
+        </script>
+        <br>
         <p class="pForms">&copy; 2024 Portal de Saúde e Bem-Estar. Todos os direitos reservados.</p>
 
       </footer>

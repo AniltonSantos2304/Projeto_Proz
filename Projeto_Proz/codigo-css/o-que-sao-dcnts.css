@@ -8,15 +8,19 @@
 
 /* Definição das variáveis de cores */
 :root {
-    --cor-primaria: #1dc4bb; /* Cor primária */
-    --cor-secundaria: #276e2d; /* Cor secundária */
-    --cor-destaque: #cbf1cb; /* Cor de destaque */
-    --cor-planoDeFundo: #8FBC8F; /* Cor plano de fundo section */
+    --cor-primaria: #1dc4bb;
+    /* Cor primária */
+    --cor-secundaria: #276e2d;
+    /* Cor secundária */
+    --cor-destaque: #cbf1cb;
+    /* Cor de destaque */
+    --cor-planoDeFundo: #8FBC8F;
+    /* Cor plano de fundo section */
 }
 
 /* Estilo do cabeçalho */
 header {
-    background-color: var(--cor-destaque) ;
+    background-color: var(--cor-destaque);
     color: var(--cor-secundaria);
     padding: 20px;
     text-align: center;
@@ -33,14 +37,16 @@ header {
 nav {
     background-color: var(--cor-secundaria);
     padding: 10px;
-    text-align: center; /* Alinha os links ao centro */
+    text-align: center;
+    /* Alinha os links ao centro */
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    margin: 0 10px; /* Adiciona margem horizontal entre os links */
+    margin: 0 10px;
+    /* Adiciona margem horizontal entre os links */
 }
 
 /* Estilo do conteúdo */
@@ -51,6 +57,7 @@ section {
     text-decoration: none;
 }
 
+/* Estilo das uls */
 .media {
     text-align: center;
     font-size: 20px;
@@ -60,34 +67,37 @@ section {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     padding: 20px;
+    list-style-type: none;
+}
+
+.media li {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+}
+
+.media li:hover {
+    background-color: var(--cor-planoDeFundo);
+    /* Mudança de cor quando o mouse passa por cima */
 }
 
 p {
     text-align: left;
-  }
-  
+}
+
 h3 {
-    text-align: left;
+    text-align: center;
 }
 
 ul {
     list-style-position: inside;
     text-align: left;
-}  
-
-/* img {
-    width: 40%;
-    flex-shrink: 0; /* Evita que a imagem diminua para caber no contêiner */
-    border-radius: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-}  */
+}
 
 .img-2 {
     width: 40%;
-    flex-shrink: 0; /* Evita que a imagem diminua para caber no contêiner */
+    flex-shrink: 0;
+    /* Evita que a imagem diminua para caber no contêiner */
     border-radius: 10px;
     margin: auto;
     padding-bottom: 20px;
@@ -96,25 +106,32 @@ ul {
 
 /* Estilo do rodapé */
 footer {
-    background-color: var(--cor-secundaria); /* Cor de fundo do rodapé */
-    padding: 20px; /* Espaçamento interno do rodapé */
-  }
-  
-  .container {
+    background-color: var(--cor-secundaria);
+    /* Cor de fundo do rodapé */
+    padding: 20px;
+    /* Espaçamento interno do rodapé */
+}
+
+.container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Duas colunas com larguras iguais */
-    gap: 20px; /* Espaçamento entre as colunas */
-  }
-  
-  .forms-rodape {
-    margin: 0; /* Remover margem padrão do formulário */
+    grid-template-columns: repeat(2, 1fr);
+    /* Duas colunas com larguras iguais */
+    gap: 20px;
+    /* Espaçamento entre as colunas */
+    text-align: left;
+}
+
+.forms-rodape {
+    margin: 0;
+    /* Remover margem padrão do formulário */
     background-color: #f2f2f2;
     border: 1px solid #ccc;
-  }
-  
-  .pForms {
-    margin: 0; /* Remover margem padrão do parágrafo */
+    padding: 20px;
+}
+
+.pForms {
+    margin: 0;
+    /* Remover margem padrão do parágrafo */
     color: white;
     text-align: center;
-  }
-  
+}

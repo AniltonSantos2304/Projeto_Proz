@@ -8,39 +8,45 @@
 
 /* Definição das variáveis de cores */
 :root {
-    --cor-primaria: #1dc4bb; /* Cor primária */
-    --cor-secundaria: #276e2d; /* Cor secundária */
-    --cor-destaque: #cbf1cb; /* Cor de destaque */
-    --cor-planoDeFundo: #8FBC8F; /* Cor plano de fundo section */
+    --cor-primaria: #1dc4bb;
+    /* Cor primária */
+    --cor-secundaria: #276e2d;
+    /* Cor secundária */
+    --cor-destaque: #cbf1cb;
+    /* Cor de destaque */
+    --cor-planoDeFundo: #8FBC8F;
+    /* Cor plano de fundo section */
 }
 
 /* Estilo do cabeçalho */
 header {
-    background-color: var(--cor-destaque) ;
+    background-color: var(--cor-destaque);
     color: var(--cor-secundaria);
     padding: 20px;
     text-align: center;
 }
-  
+
 .logo {
-width: 200px;
-height: auto;
-margin-bottom: 20px;
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
 
 }
-    
+
 /* Estilo da navegação */
 nav {
     background-color: var(--cor-secundaria);
     padding: 10px;
-    text-align: center; /* Alinha os links ao centro */
+    text-align: center;
+    /* Alinha os links ao centro */
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    margin: 0 10px; /* Adiciona margem horizontal entre os links */
+    margin: 0 10px;
+    /* Adiciona margem horizontal entre os links */
 }
 
 /* Estilo do conteúdo */
@@ -68,7 +74,8 @@ section {
 
 img {
     width: 60%;
-    flex-shrink: 0; /* Evita que a imagem diminua para caber no contêiner */
+    flex-shrink: 0;
+    /* Evita que a imagem diminua para caber no contêiner */
     border-radius: 10px;
     display: block;
     margin-left: auto;
@@ -76,7 +83,8 @@ img {
 }
 
 #img-2 {
-    flex-shrink: 0; /* Evita que a imagem diminua para caber no contêiner */
+    flex-shrink: 0;
+    /* Evita que a imagem diminua para caber no contêiner */
     border-radius: 10px;
     display: block;
     margin-left: auto;
@@ -88,28 +96,46 @@ ul {
     list-style-position: inside;
     text-align: left;
 
-}  
+}
+
+.ul_dados li {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+}
+
+.ul_dados li:hover {
+    background-color: var(--cor-planoDeFundo);
+    /* Mudança de cor quando o mouse passa por cima */
+}
 
 /* Estilo do rodapé */
 footer {
-    background-color: var(--cor-secundaria); /* Cor de fundo do rodapé */
-    padding: 20px; /* Espaçamento interno do rodapé */
-  }
-  
-  .container {
+    background-color: var(--cor-secundaria);
+    /* Cor de fundo do rodapé */
+    padding: 20px;
+    /* Espaçamento interno do rodapé */
+}
+
+.container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Duas colunas com larguras iguais */
-    gap: 20px; /* Espaçamento entre as colunas */
-  }
-  
-  .forms-rodape {
+    grid-template-columns: repeat(2, 1fr);
+    /* Duas colunas com larguras iguais */
+    gap: 20px;
+    /* Espaçamento entre as colunas */
+    text-align: left;
+
+}
+
+.forms-rodape {
+    padding: 20px;
     background-color: #f2f2f2;
     border: 1px solid #ccc;
   }
-  
-  .pForms {
-    margin: 0; /* Remover margem padrão do parágrafo */
+
+.pForms {
+    margin: 0;
+    /* Remover margem padrão do parágrafo */
     color: white;
     text-align: center;
-  }
-  
+}
