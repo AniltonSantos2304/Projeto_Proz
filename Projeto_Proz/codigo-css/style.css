@@ -36,7 +36,7 @@ nav {
   justify-content: space-between; /* Distribui espaço entre links e formulário */
   align-items: center; /* Alinha verticalmente no centro */
   margin: 0 auto; /* Centraliza horizontalmente */
-  width: 40%; /* Define largura máxima (ajuste conforme necessário) */
+  width: 45%; /* Define largura máxima (ajuste conforme necessário) */
   padding: 10px; /* Adiciona padding para espaçamento interno */
   border-radius: 5px; /* Arredonda os cantos */
 }
@@ -61,21 +61,20 @@ nav {
   margin-right: 10px; /* Espaço à direita do input */
 }
 
-
-
 /* Estilo do conteúdo */
+
 section {
   padding: 400px;
   background-color: var(--cor-planoDeFundo);
   padding-top: 100px;
-  padding-bottom: 20px;
+  padding-bottom: 20px;     
 }
 
 .primeiroParagrafo {
   display: flex; /* Torna a div um flex container */
   align-items: center; /* Alinha os itens verticalmente */
-  padding: 5px;
-  margin-bottom: 5px; /* Aumenta a distância entre a classe1 e a próxima classe */
+  padding: 10px;
+  margin-bottom: 10px; /* Aumenta a distância entre a classe1 e a próxima classe */
 }
 
 .primeiroParagrafo img {

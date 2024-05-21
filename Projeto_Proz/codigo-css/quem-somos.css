@@ -1,0 +1,253 @@
+/* Estilo geral do corpo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+:root {
+    --cor-primaria: #1dc4bb;
+    /* Cor primária */
+    --cor-secundaria: #276e2d;
+    /* Cor secundária */
+    --cor-destaque: #cbf1cb;
+    /* Cor de destaque */
+    --cor-planoDeFundo: #8FBC8F;
+    /* Cor plano de fundo section */
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: var(--cor-destaque);
+    color: var(--cor-secundaria);
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+
+}
+
+/* Estilo da navegação */
+nav {
+    display: flex;
+    /* Ativa layout flexbox */
+    justify-content: space-between;
+    /* Distribui espaço entre links e formulário */
+    align-items: center;
+    /* Alinha verticalmente no centro */
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
+    width: 45%;
+    /* Define largura máxima (ajuste conforme necessário) */
+    padding: 10px;
+    /* Adiciona padding para espaçamento interno */
+    border-radius: 5px;
+    /* Arredonda os cantos */
+}
+
+#linkmenu a {
+    margin: 0 15px;
+    /* Espaçamento entre links */
+    text-decoration: none;
+    /* Remove sublinhado */
+    color: #333;
+    /* Cor dos links */
+    font-weight: bold;
+    /* Texto em negrito */
+}
+
+#linkmenu a:hover {
+    color: var(--cor-primaria);
+    /* Cor dos links ao passar o mouse */
+}
+
+.form-inline {
+    display: flex;
+    /* Ativa layout flexbox */
+    padding-top: 20px;
+}
+
+.form-control {
+    flex-grow: 1;
+    /* Permite que o input ocupe o espaço disponível */
+    margin-right: 10px;
+    /* Espaço à direita do input */
+}
+
+/* Estilo do conteúdo */
+section {
+    padding: 400px;
+    background-color: var(--cor-planoDeFundo);
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+section img {
+    margin: 0 auto;
+    /* Centraliza a imagem na horizontal */
+    display: block;
+    /* Exibe a imagem como um bloco */
+    max-width: 100%;
+    /* Limita a largura da imagem ao tamanho da tela */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    width: 500px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.missao,
+.visao {
+    display: inline-block;
+    /* Torna os elementos em linha */
+    width: 49%;
+    /* Define a largura de cada elemento como 49% */
+    margin: 0 1% 0 0;
+    /* Adiciona margem entre os elementos */
+}
+
+.visao {
+    /* Estilos específicos para a div "Visão" */
+    float: right;
+    /* Faz a div "Visão" flutuar para a direita */
+}
+
+
+.introdução {
+    text-align: center;
+}
+
+/* Seção de membros do projeto */
+#membros-projeto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--cor-planoDeFundo);
+    /* Cor de fundo padrão */
+    transition: background-color 0.3s ease;
+    /* Defina a transição */
+}
+
+#membros-projeto:hover {
+    background-color: var(--cor-primaria);
+    /* Verde piscina ao passar o mouse */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra para elevação */
+}
+
+.membro {
+    flex-basis: 30%;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.membro img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.membro h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.membro p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.membro a {
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+/* Forms newletter */
+.rodapé {
+    display: flex;
+    /* Ativa o layout flexbox */
+    flex-direction: row;
+    /* Organiza os elementos na horizontal */
+    align-items: flex-start;
+    /* Alinha os itens no topo */
+    gap: 20px;
+    /* Espaçamento entre os elementos */
+    padding: 5px;
+}
+
+.container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    /* O formulário ocupará a largura necessária e o resto será preenchido pelo conteúdo à direita */
+    gap: 20px;
+    /* Espaçamento entre as colunas */
+    padding: 20px;
+    margin: auto;
+    max-width: 80%;
+}
+
+.forms-rodape {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+
+/* Estilo do rodapé */
+.redes-sociais {
+    text-align: right;
+    /* Alinhar os links das redes sociais à direita */
+    flex: 1;
+    padding: 100px;
+}
+
+.redes-sociais a {
+    color: #fff;
+    /* Cor do texto */
+    text-decoration: none;
+    /* Remover sublinhado */
+    margin-right: 20px;
+    /* Espaçamento entre os links */
+}
+
+#rede {
+    color: white;
+}
+
+/* Estilos para os ícones */
+.redes-sociais a i {
+    margin-right: 30px;
+    /* Espaçamento entre o ícone e o texto */
+    font-size: 24px;
+}
+
+footer {
+    background-color: var(--cor-secundaria);
+    /* Cor de fundo do rodapé */
+    padding: 20px;
+    /* Espaçamento interno do rodapé */
+}
+
+.pForms {
+    margin: 0;
+    /* Remover margem padrão do parágrafo */
+    color: white;
+    text-align: right;
+    /* Alinhar o parágrafo à direita */
+    padding: 100px;
+}

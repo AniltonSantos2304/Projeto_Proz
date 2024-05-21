@@ -39,7 +39,7 @@ nav {
   justify-content: space-between; /* Distribui espaço entre links e formulário */
   align-items: center; /* Alinha verticalmente no centro */
   margin: 0 auto; /* Centraliza horizontalmente */
-  width: 40%; /* Define largura máxima (ajuste conforme necessário) */
+  width: 45%; /* Define largura máxima (ajuste conforme necessário) */
   padding: 10px; /* Adiciona padding para espaçamento interno */
   border-radius: 5px; /* Arredonda os cantos */
 }
