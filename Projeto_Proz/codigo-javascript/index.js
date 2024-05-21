@@ -31,6 +31,7 @@ for (var i = 0; i < images2.length; i++) {
 // Animação cards página index
 
 var cards = document.getElementsByClassName('cardsInterativos');
+console.log('teste 2');
 
 for (var i = 0; i < cards.length; i++) {
     cards[i].addEventListener('mouseover', function () {
@@ -71,4 +72,4 @@ function toggleVisibility() {
     } else {
       texto.style.display = "none";
     }
-  }
+}

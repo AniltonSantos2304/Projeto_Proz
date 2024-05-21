@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
 }
 
 /* Definição das variáveis de cores */
@@ -34,26 +35,44 @@ header {
 
 /* Estilo da navegação */
 nav {
-  background-color: var(--cor-secundaria);
-  padding: 10px;
-  text-align: center;
-  /* Alinha os links ao centro */
+  display: flex; /* Ativa layout flexbox */
+  justify-content: space-between; /* Distribui espaço entre links e formulário */
+  align-items: center; /* Alinha verticalmente no centro */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  width: 40%; /* Define largura máxima (ajuste conforme necessário) */
+  padding: 10px; /* Adiciona padding para espaçamento interno */
+  border-radius: 5px; /* Arredonda os cantos */
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  margin: 0 10px;
-  /* Adiciona margem horizontal entre os links */
+#linkmenu a {
+  margin: 0 15px; /* Espaçamento entre links */
+  text-decoration: none; /* Remove sublinhado */
+  color: #333; /* Cor dos links */
+  font-weight: bold; /* Texto em negrito */
+}
+
+#linkmenu a:hover {
+  color: var(--cor-primaria); /* Cor dos links ao passar o mouse */
+}
+
+.form-inline {
+  display: flex; /* Ativa layout flexbox */
+  padding-top: 20px;
+}
+
+.form-control {
+  flex-grow: 1; /* Permite que o input ocupe o espaço disponível */
+  margin-right: 10px; /* Espaço à direita do input */
 }
 
 /* Estilo do conteúdo */
-section {
-  padding: 20px;
+section {  
   background-color: var(--cor-planoDeFundo);
   text-align: center;
   text-decoration: none;
+  padding: 400px;
+  padding-top: 100px;
+  padding-bottom: 20px;
 }
 
 a {
@@ -88,31 +107,60 @@ p {
 }
 
 /* Forms newletter */
+.rodapé {
+  display: flex; /* Ativa o layout flexbox */
+  flex-direction: row; /* Organiza os elementos na horizontal */
+  align-items: flex-start; /* Alinha os itens no topo */
+  gap: 20px; /* Espaçamento entre os elementos */
+  padding: 5px;
+}
+
 .container {
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* Duas colunas com larguras iguais */
   gap: 20px;
-  /* Espaçamento entre as colunas */
-  border-radius: 5px;
-  margin: auto;
-  max-width: 100%;
-  text-align: left;
+  padding: 20px;
 }
 
 .forms-rodape {
+  margin: 0;
   padding: 20px;
   background-color: #f2f2f2;
   border: 1px solid #ccc;
 }
 
 /* Estilo do rodapé */
-footer {
-  background-color: var(--cor-secundaria);
+.redes-sociais {
+  flex: 1;
+  text-align: right; /* Alinhar os links das redes sociais à direita */
+  padding: 100px;
+}
+
+.redes-sociais a {
+  color: #fff; /* Cor do texto */
+  text-decoration: none; /* Remover sublinhado */
+  margin-right: 20px; /* Espaçamento entre os links */
+}
+
+#rede {
   color: white;
-  padding: 20px;
+}
+
+/* Estilos para os ícones */
+.redes-sociais a i {
+  margin-right: 30px; /* Espaçamento entre o ícone e o texto */
+  font-size: 24px;
+}
+
+footer {
+  background-color: var(--cor-secundaria); /* Cor de fundo do rodapé */
+  padding: 20px; /* Espaçamento interno do rodapé */
 }
 
 .pForms {
-  text-align: center;
+  margin: 0; /* Remover margem padrão do parágrafo */
+  color: white;
+  text-align: center; /* Alinhar o parágrafo à direita */
+  padding: 100px;
 }

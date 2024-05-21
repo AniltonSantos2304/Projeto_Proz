@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
 }
 
 /* Definição das variáveis de cores */
@@ -31,30 +32,50 @@ header {
 
 /* Estilo da navegação */
 nav {
-  background-color: var(--cor-secundaria);
-  padding: 10px;
-  text-align: center; /* Alinha os links ao centro */
+  display: flex; /* Ativa layout flexbox */
+  justify-content: space-between; /* Distribui espaço entre links e formulário */
+  align-items: center; /* Alinha verticalmente no centro */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  width: 40%; /* Define largura máxima (ajuste conforme necessário) */
+  padding: 10px; /* Adiciona padding para espaçamento interno */
+  border-radius: 5px; /* Arredonda os cantos */
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  margin: 0 10px; /* Adiciona margem horizontal entre os links */
+#linkmenu a {
+  margin: 0 15px; /* Espaçamento entre links */
+  text-decoration: none; /* Remove sublinhado */
+  color: #333; /* Cor dos links */
+  font-weight: bold; /* Texto em negrito */
 }
+
+#linkmenu a:hover {
+  color: var(--cor-primaria); /* Cor dos links ao passar o mouse */
+}
+
+.form-inline {
+  display: flex; /* Ativa layout flexbox */
+}
+
+.form-control {
+  flex-grow: 1; /* Permite que o input ocupe o espaço disponível */
+  margin-right: 10px; /* Espaço à direita do input */
+}
+
 
 
 /* Estilo do conteúdo */
 section {
-  padding: 20px;
+  padding: 400px;
   background-color: var(--cor-planoDeFundo);
+  padding-top: 100px;
+  padding-bottom: 20px;
 }
 
 .primeiroParagrafo {
   display: flex; /* Torna a div um flex container */
   align-items: center; /* Alinha os itens verticalmente */
-  padding: 20px;
-  margin-bottom: 20px; /* Aumenta a distância entre a classe1 e a próxima classe */
+  padding: 5px;
+  margin-bottom: 5px; /* Aumenta a distância entre a classe1 e a próxima classe */
 }
 
 .primeiroParagrafo img {
@@ -66,7 +87,7 @@ section {
 .primeiroParagrafo p {
   font-size: 20px; /* Ajuste o tamanho do texto conforme necessário */
   border: 1px solid #ccc; /* Adiciona uma borda sólida de 1px com cor cinza */
-  padding: 20px; /* Adiciona um preenchimento interno de 10px para separar o texto da borda */
+  padding: 20px; /* Adiciona um preenchimento interno para separar o texto da borda */
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra com deslocamento de 2px na horizontal, 2px na vertical, desfoque de 5px e cor preta com transparência de 0.1 */
   background-color: #f3ebeb;
   border-radius: 10px;
@@ -79,12 +100,12 @@ section {
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  padding: 20px;
+  margin-bottom: 5px;
+  padding: 5px;
 }
 
 .terceiroParagrafo img {
-  width: 800px; /* Define a largura da imagem como 200 pixels */
+  width: 800px; /* Define a largura da imagem */
   height: auto; /* Mantém a proporção da imagem ao ajustar a largura */
   border-radius: 10px;
   margin-bottom: 20px;
@@ -110,26 +131,40 @@ section {
 
 /* Forms comentários */
 .shadow-lg {
-  margin-left: auto;
+  margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+  .shadow-lg {
+    margin: 20px auto;
+  }
+}
+
 form {
   padding: 20px;
   border-radius: 5px;
   margin: auto;
   max-width: 100%;
   text-align: left;
-  }
+}
 
 /* Forms newletter */
+.rodapé {
+  display: flex; /* Ativa o layout flexbox */
+  flex-direction: row; /* Organiza os elementos na horizontal */
+  align-items: flex-start; /* Alinha os itens no topo */
+  gap: 20px; /* Espaçamento entre os elementos */
+  padding: 5px;
+}
+
 .container {
+  flex: 1;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Duas colunas com larguras iguais */
+  grid-template-columns: auto 1fr; /* O formulário ocupará a largura necessária e o resto será preenchido pelo conteúdo à direita */
   gap: 20px; /* Espaçamento entre as colunas */
   padding: 20px;
-  border-radius: 5px;
   margin: auto;
-  max-width: 100%;
-  text-align: left;
+  max-width: 80%;
 }
 
 .forms-rodape {
@@ -138,7 +173,30 @@ form {
   border: 1px solid #ccc;
 }
 
+
 /* Estilo do rodapé */
+.redes-sociais {
+  text-align: right; /* Alinhar os links das redes sociais à direita */
+  flex: 1;
+  padding: 100px;
+}
+
+.redes-sociais a {
+  color: #fff; /* Cor do texto */
+  text-decoration: none; /* Remover sublinhado */
+  margin-right: 20px; /* Espaçamento entre os links */
+}
+
+#rede {
+  color: white;
+}
+
+/* Estilos para os ícones */
+.redes-sociais a i {
+  margin-right: 30px; /* Espaçamento entre o ícone e o texto */
+  font-size: 24px;
+}
+
 footer {
   background-color: var(--cor-secundaria); /* Cor de fundo do rodapé */
   padding: 20px; /* Espaçamento interno do rodapé */
@@ -147,5 +205,6 @@ footer {
 .pForms {
   margin: 0; /* Remover margem padrão do parágrafo */
   color: white;
-  text-align: center;
+  text-align: right; /* Alinhar o parágrafo à direita */
+  padding: 100px;
 }

@@ -12,7 +12,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>  
-  
+    <!-- Outros metadados e links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     
 </head>
@@ -31,13 +33,17 @@
           <a href="./o-que-sao-dcnts.html">O que são DCTNs?</a>
           <a href="./prevencao.html">Prevenção</a>
         </div>
+        <form class="form-inline float-right">
+          <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>
       </nav>
     <main>
         <section>
             <div class="primeira">
-                <h1 class="h1">DCNTs e Fatores de Risco</h1>
+                <h3 class="h1">DCNTs e Fatores de Risco</h3>
                 <br>
-                <img  src="/Projeto_Proz/imagem/dcnt_Prancheta-1.png" alt="Diga não ao cigarro" class="imagens"/>
+                <img class="card-img-bottom" id="img-1" src="/Projeto_Proz/imagem/dcnt_Prancheta-1.png" alt="Diga não ao cigarro" class="imagens"/>
                 <br>
                 <br>
                 <p>As doenças crônicas não transmissíveis (DCNTs) são a principal causa de morte e incapacidade no mundo. Elas
@@ -50,7 +56,7 @@
                     principais fatores de risco evitáveis para as DCNTs:</p>            
                 <br>
                 <br>
-                <img id="img-2" src="/Projeto_Proz/imagem/5X5DCNTs.png" alt="Causa das doenças" class="imagens"/>
+                <img class="card-img-bottom" id="img-2" src="/Projeto_Proz/imagem/5X5DCNTs.png" alt="Causa das doenças" class="imagens"/>
                 <br>
                 <br>
                 <p>Para fortalecer o controle das DCNTs, estão sendo realizadas várias ações, como o monitoramento independente
@@ -86,7 +92,7 @@
 
     </main>  
 
-    <footer>
+    <footer class="rodapé">
       <!-- Forms footer -->
       <div class="container">
         <form id="form-newsletter" class="forms-rodape needs-validation" action="enviar_depoimento.php" method="post" novalidate>
@@ -144,7 +150,15 @@
           }, false);
         })();
       </script>
-      <br>  
+      <br>
+      <div class="redes-sociais">
+        <h3 id="rede">Acesse Nossas Redes Sociais!</h3>
+        <a href="https://www.instagram.com/maisvida" target="_blank"><i class="fab fa-instagram"></i> Instagram Mais Vida</a>
+        <br>
+        <a href="https://t.me/maisvida" target="_blank"><i class="fab fa-telegram"></i> Telegram Mais Vida</a>
+        <br>
+        <a href="https://www.youtube.com/maisvida" target="_blank"><i class="fab fa-youtube"></i> YouTube Mais Vida</a>
+      </div>  
       <p class="pForms">&copy; 2024 Portal de Saúde e Bem-Estar. Todos os direitos reservados.</p>
 
       </footer>
