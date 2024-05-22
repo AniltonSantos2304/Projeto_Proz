@@ -143,6 +143,30 @@ ul {
   /* Mudança de cor quando o mouse passa por cima */
 }
 
+#noticias {
+  background-color: var(--cor-planoDeFundo);
+    /* Cor de fundo padrão */
+  transition: background-color 0.3s ease;
+}
+
+#noticias:hover {
+  background-color: var(--cor-primaria);
+    /* Verde piscina ao passar o mouse */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#eventos {
+  background-color: var(--cor-planoDeFundo);
+    /* Cor de fundo padrão */
+  transition: background-color 0.3s ease;
+}
+
+#eventos:hover {
+  background-color: var(--cor-primaria);
+    /* Verde piscina ao passar o mouse */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
 /* Estilo do rodapé */
 .rodapé {
   display: flex;
