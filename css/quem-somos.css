@@ -14,7 +14,7 @@
     /* Cor secundária */
     --cor-destaque: #cbf1cb;
     /* Cor de destaque */
-    --cor-planoDeFundo: #8FBC8F;
+    --cor-planoDeFundo: #a7cea7;
     /* Cor plano de fundo section */
 }
 
@@ -30,7 +30,6 @@ header {
     width: 200px;
     height: auto;
     margin-bottom: 20px;
-
 }
 
 /* Estilo da navegação */
@@ -83,7 +82,7 @@ nav {
 /* Estilo do conteúdo */
 section {
     padding: 400px;
-    background-color: var(--cor-planoDeFundo);
+    background-color: var(--cor-destaque);
     padding-top: 100px;
     padding-bottom: 20px;
 }
@@ -205,6 +204,7 @@ section img {
     background-color: #f2f2f2;
     border: 1px solid #ccc;
     padding: 20px;
+    border-radius: 5px;
 }
 
 

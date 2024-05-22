@@ -12,7 +12,7 @@
   --cor-primaria: #1dc4bb; /* Cor primária */
   --cor-secundaria: #276e2d; /* Cor secundária */
   --cor-destaque: #cbf1cb; /* Cor de destaque */
-  --cor-planoDeFundo: #8FBC8F; /* Cor plano de fundo section */
+  --cor-planoDeFundo: #a7cea7; /* Cor plano de fundo section */
 }
 
 /* Estilo do cabeçalho */
@@ -129,6 +129,10 @@ section {
 }
 
 /* Forms comentários */
+
+.forms-comentario {
+  width: 100%;
+}
 .shadow-lg {
   margin: 0 auto;
 }
