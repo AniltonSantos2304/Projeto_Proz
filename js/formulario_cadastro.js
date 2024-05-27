@@ -12,15 +12,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (formIsValid()) {
             alert("Formulário enviado!");
-            window.location.href = '/Projeto_Proz/codigo-html/index.html';
+            window.location.href = '/Projeto_Proz/index.html';
         }
     });
 // Função para exibir mensagens de erro
     function displayErrorMessage(message, campoId) {
-        let mensagemErro = document.getElementById(${campoId}-error);
+        let mensagemErro = document.getElementById(`${campoId}-error`);
         if (!mensagemErro) {
             mensagemErro = document.createElement('span');
-            mensagemErro.id = ${campoId}-error;
+            mensagemErro.id = `${campoId}-erro`;
             mensagemErro.classList.add('mensagem-erro');
             document.getElementById(campoId).parentNode.insertBefore(mensagemErro, document.getElementById(campoId).nextSibling);
         }
@@ -76,7 +76,7 @@ function validateEmail(email) {
     campos.forEach(campoId => {
         const campo = document.getElementById(campoId);
         campo.addEventListener('input', function () {
-            const mensagemErro = document.getElementById(${campoId}-error);
+            const mensagemErro = document.getElementById(`${campoId}-error`);
             mensagemErro.style.display = 'none';
         });
     });
@@ -87,6 +87,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     fecharFormularioBtn.addEventListener('click', function () {
         // Redireciona de volta para a página index.html
-        window.location.href = '/Projeto_Proz/codigo-html/index.html';
+        window.location.href = './index.html';
     });
 });

@@ -1,0 +1,21 @@
+.form-container {
+    position: relative;
+    padding-top: 40px;
+}
+
+.botao-fechar {
+    position: absolute;
+    top: 150px;
+    left: 900px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+.form-container img {
+    width: 200px;
+    height: auto;
+    margin: 0 auto 20px;
+}
