@@ -39,6 +39,7 @@ nav {
   width: 45%; /* Define largura máxima (ajuste conforme necessário) */
   padding: 10px; /* Adiciona padding para espaçamento interno */
   border-radius: 5px; /* Arredonda os cantos */
+  border-bottom: 5px;
 }
 
 #linkmenu a {
@@ -211,3 +212,5 @@ footer {
   text-align: right; /* Alinhar o parágrafo à direita */
   padding: 100px;
 }
+
+
