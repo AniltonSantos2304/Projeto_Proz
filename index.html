@@ -331,7 +331,7 @@
 
     </section>
 
-    <form>
+    <form id="comentarioForm">
       <h2>Formulário de Comentário</h2>
       <label for="nome">Seu Nome (opcional):</label>
       <input type="text" id="nome" name="nome">
@@ -355,6 +355,7 @@
       <input type="submit" value="Enviar">
     </form>
 
+    <div id="mensagem" style="margin-top: 20px; display: none;"></div>
 
   </main>
 
@@ -372,6 +373,39 @@
     <p class="pForms">&copy; 2024 Portal de Saúde e Bem-Estar. Todos os direitos reservados.</p>
 
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var formulario = document.getElementById('comentarioForm');
+      var mensagemDiv = document.getElementById('mensagem');
+
+      if (formulario && mensagemDiv) {
+        formulario.addEventListener('submit', function (event) {
+          event.preventDefault(); // Evita o envio do formulário
+
+          var nome = document.getElementById('nome').value || "Não informado";
+          var email = document.getElementById('email').value || "Não informado";
+          var comentario = document.getElementById('comentario').value || "Nenhum comentário fornecido";
+          var avaliacao = document.getElementById('avaliacao').value;
+
+          // Exibe os dados do formulário
+          mensagemDiv.innerHTML = `
+            <div style="background-color: #f9f9f9; border: 1px solid #ddd; padding: 20px; border-radius: 5px;">
+              <h3 style="margin-bottom: 10px;">Dados do Comentário:</h3>
+              <p><strong>Nome:</strong> ${nome}</p>
+              <p><strong>Email:</strong> ${email}</p>
+              <p><strong>Comentário:</strong> ${comentario}</p>
+              <p><strong>Avaliação:</strong> ${avaliacao ? avaliacao + ' estrela(s)' : 'Não avaliado'}</p>
+            </div>
+          `;
+
+          formulario.style.display = 'none';
+          mensagemDiv.style.display = 'block';
+        });
+      } else {
+        console.error("Elemento 'comentarioForm' ou 'mensagem' não encontrado.");
+      }
+    });
+  </script>
 
 </body>
 
