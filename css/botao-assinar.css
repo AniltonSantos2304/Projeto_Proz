@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.assinar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.assinar-container p {
+    margin-bottom: 10px;
+    text-align: right;
+}

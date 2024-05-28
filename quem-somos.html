@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal de Saúde e Bem-Estar</title>
     <link rel="stylesheet" href="/css/quem-somos.css" />
+    <link rel="stylesheet" href="/css/botao-assinar.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="/js/index.js" defer></script>
+    <script src="/js/formulario_cadastro.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -28,6 +30,12 @@
         <img src="/images/Logo-mais-vida.png" alt="Logo do site" class="logo" />
         <div class="menuinicio">
             <h1>Portal de Saúde e Bem-Estar</h1>
+        </div>
+
+        <div id="assinarContainer" class="assinar-container">
+            <p>Fique por dentro das novas atualizações</p>
+
+            <button id="assinarButton" class="btn btn-primary" onclick="cadastrar()">Assinar</button>
         </div>
     </header>
 
@@ -106,10 +114,10 @@
             <div class="membro">
                 <img src="/images/img_alana.jpg" alt="Foto de Alana Silva">
                 <h3>Alana Silva</h3>
-                <p>Estou em transição de carreira e estudando programação desde o final de 2022. 
-                    Concluí cursos profissionalizantes de front-end e back-end e atualmente curso o primeiro semestre 
-                    de Análise e Desenvolvimento de Sistemas. Sempre fui apaixonada por tecnologia e sou muito curiosa 
-                    em aprender. Estou empolgada para aplicar meus conhecimentos em projetos reais e contribuir para o 
+                <p>Estou em transição de carreira e estudando programação desde o final de 2022.
+                    Concluí cursos profissionalizantes de front-end e back-end e atualmente curso o primeiro semestre
+                    de Análise e Desenvolvimento de Sistemas. Sempre fui apaixonada por tecnologia e sou muito curiosa
+                    em aprender. Estou empolgada para aplicar meus conhecimentos em projetos reais e contribuir para o
                     avanço tecnológico.</p>
                 <a href="https://www.linkedin.com/in/alana-soares-silva/" target="_blank">LinkedIn</a>
                 <br>
@@ -120,8 +128,9 @@
                 <img src="/images/img_anilton.jpg" alt="Foto de Anilton Júnior">
                 <h3>Anilton Júnior</h3>
                 <p>Apaixonado por tecnologia, gosto de enfrentar novos desafios no mundo da programação; as horas mais
-                    incríveis do meu dia são aquelas em que estou programando. Atualmente sou estudante do curso Análise e 
-                    Desenvolvimento de Sistemas e estudando Java, Spring Boot e MySQL, 
+                    incríveis do meu dia são aquelas em que estou programando. Atualmente sou estudante do curso Análise
+                    e
+                    Desenvolvimento de Sistemas e estudando Java, Spring Boot e MySQL,
                     tenho 21 anos e apaixonado por criar e aprender coisas novas.</p>
                 <a href="https://www.linkedin.com/in/anilton-santos-ab5a77228/" target="_blank">LinkedIn</a>
                 <br>
@@ -130,66 +139,6 @@
         </section>
 
         <footer class="rodapé">
-            <!-- /* Forms newletter */ -->
-            <!-- Validação de formulário 2 -->
-            <script>
-                (function () {
-                    'use strict';
-                    window.addEventListener('load', function () {
-                        // Busca por formulários com a classe "needs-validation" e previne seu envio caso eles não sejam válidos
-                        var forms = document.getElementsByClassName('needs-validation');
-                        var validation = Array.prototype.filter.call(forms, function (form) {
-                            form.addEventListener('submit', function (event) {
-                                if (form.checkValidity() === false) {
-                                    event.preventDefault();
-                                    event.stopPropagation();
-                                }
-                                form.classList.add('was-validated');
-
-                                // Itera sobre todos os campos do formulário
-                                var inputs = form.querySelectorAll('input');
-                                inputs.forEach(function (input) {
-                                    input.addEventListener('input', function () {
-                                        // Remove a mensagem de erro se o campo for válido
-                                        if (input.checkValidity()) {
-                                            input.classList.remove('is-invalid');
-                                            input.nextElementSibling.textContent = '';
-                                        } else {
-                                            // Adiciona a mensagem de erro se o campo for inválido
-                                            input.classList.add('is-invalid');
-                                            input.nextElementSibling.textContent = input.validationMessage;
-                                        }
-                                    });
-                                });
-                            }, false);
-                        });
-                    }, false);
-                })();
-            </script>
-
-            <div class="container">
-                <form id="form-newsletter" class="forms-rodape needs-validation" action="enviar_depoimento.php"
-                    method="post" novalidate>
-                    <h5>Assine a newsletter do Mais Vida e fique por dentro!</h5>
-                    <div class="form-group">
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome"
-                            required>
-                        <div class="invalid-feedback">
-                            Nome é obrigatório.
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail:</label>
-                        <input type="email" id="email" name="email" class="form-control"
-                            placeholder="Digite seu endereço de e-mail" required>
-                        <div class="invalid-feedback">
-                            Email inválido.
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="background-color: green;">Enviar</button>
-                </form>
-            </div>
 
             <div class="redes-sociais">
                 <h3 id="rede">Acesse Nossas Redes Sociais!</h3>

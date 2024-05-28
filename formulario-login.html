@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulário de Login</title>
+    <link rel="stylesheet" href="/css/botao-fechar-form.css">
+    <link rel="stylesheet" href="/css/formulario-login.css">
+    <script src="/js/formulario_login.js" defer></script>
+</head>
+
+<body>
+    <div class="logo_login">
+        <img src="/images/Logo-mais-vida.png" alt="Logo do site">
+    </div>
+
+    <div class="botao-fechar">
+        <button id="fecharFormulario" class="botao-fechar">&times;</button>
+    </div>
+
+    <form>
+        <h2>Login newletter</h2>
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <span id="email-error" class="mensagem-erro"></span>
+
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha" name="senha"><br><br>
+        <span id="senha-error" class="mensagem-erro"></span>
+
+        <button type="submit" class="button">Entrar</button>
+        <p><a href="/formulario-cadastro.html" id="Cadastro">Cadastre-se</a></p>
+    </form>
+</body>
+
+</html>

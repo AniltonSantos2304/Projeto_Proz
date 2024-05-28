@@ -6,9 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portal de Saúde e Bem-Estar</title>
   <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/botao-assinar.css" />
+  <link rel="stylesheet" href="/css/formulario-comentario.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script src="/js/index.js" defer></script>
+  <script src="/js/formulario_cadastro.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -29,7 +32,14 @@
     <div class="menuinicio">
       <h1>Portal de Saúde e Bem-Estar</h1>
     </div>
+
+    <div id="assinarContainer" class="assinar-container">
+      <p>Fique por dentro das novas atualizações</p>
+
+      <button id="assinarButton" class="btn btn-primary" onclick="cadastrar()">Assinar</button>
+    </div>
   </header>
+
 
   <nav>
     <div id="linkmenu">
@@ -310,154 +320,46 @@
         <br>
         <br>
 
-        <!-- Forms comentários -->
+        <script>
+          function cadastrar() {
+            window.location.href = './formulario-cadastro.html';
+          }
+        </script>
 
-        <section class="forms-comentario">
-          <div class="shadow-lg p-3 mb-5 bg-white rounded">
-            <form id="form-depoimento" action="enviar_depoimento.php" method="post" class="needs-validation" novalidate>
   
-              <h3>Deixe seu Comentário.</h3>
-              <h3>Sua opinião é importante para nós!</h3>
-  
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="nome">Nome:</label>
-                  <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome" required>
-                  <div class="invalid-feedback">
-                    Nome é obrigatório.
-                  </div>
-                </div>
-  
-                <div class="form-group col-md-6">
-                  <label for="email">E-mail:</label>
-                  <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu e-mail"
-                    required>
-                  <div class="invalid-feedback">
-                    Email inválido.
-                  </div>
-                </div>
-              </div>
-  
-              <div class="form-group">
-                <label for="depoimento">Comentário:</label>
-                <textarea id="depoimento" name="depoimento" class="form-control" rows="5" cols="50"
-                  placeholder="Compartilhe sua experiência" required></textarea>
-                <div class="invalid-feedback">
-                  Comentário vazio.
-                </div>
-              </div>
-  
-              <button type="submit" class="btn btn-success" style="background-color: green;">Enviar Comentário</button>
-  
-            </form>
-          </div>
-          <!-- Validação de formulário -->
-          <script>
-            (function () {
-              'use strict';
-              window.addEventListener('load', function () {
-                // Busca por formulários com a classe "needs-validation" e previne seu envio caso eles não sejam válidos
-                var forms = document.getElementsByClassName('needs-validation');
-                var validation = Array.prototype.filter.call(forms, function (form) {
-                  form.addEventListener('submit', function (event) {
-                    if (form.checkValidity() === false) {
-                      event.preventDefault();
-                      event.stopPropagation();
-                    } else {
-                      // Aqui você pode adicionar o código para exibir o alerta após o envio bem-sucedido
-                      alert("Pronto! Sua mensagem foi enviada com sucesso!");
-                    }
-                    form.classList.add('was-validated');
-  
-                    // Itera sobre todos os campos do formulário
-                    var inputs = form.querySelectorAll('input, textarea');
-                    inputs.forEach(function (input) {
-                      input.addEventListener('input', function () {
-                        // Remove a mensagem de erro se o campo for válido
-                        if (input.checkValidity()) {
-                          input.classList.remove('is-invalid');
-                          input.nextElementSibling.textContent = '';
-                        } else {
-                          // Adiciona a mensagem de erro se o campo for inválido
-                          input.classList.add('is-invalid');
-                          input.nextElementSibling.textContent = input.validationMessage;
-                        }
-                      });
-                    });
-                  }, false);
-                });
-              }, false);
-            })();
-          </script>
-  
-        </section>        
-
         <br>
 
     </section>
 
+    <form id="comentarioForm">
+      <h2>Formulário de Comentário</h2>
+      <label for="nome">Seu Nome (opcional):</label>
+      <input type="text" id="nome" name="nome">
+
+      <label for="email">Seu Email (opcional):</label>
+      <input type="text" id="email" name="email">
+
+      <label for="comentario">Seu Comentário:</label>
+      <textarea id="comentario" name="comentario"></textarea>
+
+      <label for="avaliacao">Avaliação (opcional):</label>
+      <select id="avaliacao" name="avaliacao">
+        <option value="">Selecione</option>
+        <option value="1">1 estrela</option>
+        <option value="2">2 estrelas</option>
+        <option value="3">3 estrelas</option>
+        <option value="4">4 estrelas</option>
+        <option value="5">5 estrelas</option>
+      </select>
+
+      <input type="submit" value="Enviar">
+    </form>
+
+    <div id="mensagem" style="margin-top: 20px; display: none;"></div>
+
   </main>
 
   <footer class="rodapé">
-    <!-- /* Forms newletter */ -->
-    <!-- Validação de formulário 2 -->
-    <script>
-      (function () {
-        'use strict';
-        window.addEventListener('load', function () {
-          // Busca por formulários com a classe "needs-validation" e previne seu envio caso eles não sejam válidos
-          var forms = document.getElementsByClassName('needs-validation');
-          var validation = Array.prototype.filter.call(forms, function (form) {
-            form.addEventListener('submit', function (event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add('was-validated');
-
-              // Itera sobre todos os campos do formulário
-              var inputs = form.querySelectorAll('input');
-              inputs.forEach(function (input) {
-                input.addEventListener('input', function () {
-                  // Remove a mensagem de erro se o campo for válido
-                  if (input.checkValidity()) {
-                    input.classList.remove('is-invalid');
-                    input.nextElementSibling.textContent = '';
-                  } else {
-                    // Adiciona a mensagem de erro se o campo for inválido
-                    input.classList.add('is-invalid');
-                    input.nextElementSibling.textContent = input.validationMessage;
-                  }
-                });
-              });
-            }, false);
-          });
-        }, false);
-      })();
-    </script>
-
-    <div class="container">
-      <form id="form-newsletter" class="forms-rodape needs-validation" action="enviar_depoimento.php" method="post"
-        novalidate>
-        <h5>Assine a newsletter do Mais Vida e fique por dentro!</h5>
-        <div class="form-group">
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome" required>
-          <div class="invalid-feedback">
-            Nome é obrigatório.
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email">E-mail:</label>
-          <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu endereço de e-mail"
-            required>
-          <div class="invalid-feedback">
-            Email inválido.
-          </div>
-        </div>
-        <button type="submit" class="btn btn-primary" style="background-color: green;">Enviar</button>
-      </form>
-    </div>
 
     <div class="redes-sociais">
       <h3 id="rede">Acesse Nossas Redes Sociais!</h3>
@@ -471,6 +373,39 @@
     <p class="pForms">&copy; 2024 Portal de Saúde e Bem-Estar. Todos os direitos reservados.</p>
 
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var formulario = document.getElementById('comentarioForm');
+      var mensagemDiv = document.getElementById('mensagem');
+
+      if (formulario && mensagemDiv) {
+        formulario.addEventListener('submit', function (event) {
+          event.preventDefault(); // Evita o envio do formulário
+
+          var nome = document.getElementById('nome').value || "Não informado";
+          var email = document.getElementById('email').value || "Não informado";
+          var comentario = document.getElementById('comentario').value || "Nenhum comentário fornecido";
+          var avaliacao = document.getElementById('avaliacao').value;
+
+          // Exibe os dados do formulário
+          mensagemDiv.innerHTML = `
+            <div style="background-color: #f9f9f9; border: 1px solid #ddd; padding: 20px; border-radius: 5px;">
+              <h3 style="margin-bottom: 10px;">Dados do Comentário:</h3>
+              <p><strong>Nome:</strong> ${nome}</p>
+              <p><strong>Email:</strong> ${email}</p>
+              <p><strong>Comentário:</strong> ${comentario}</p>
+              <p><strong>Avaliação:</strong> ${avaliacao ? avaliacao + ' estrela(s)' : 'Não avaliado'}</p>
+            </div>
+          `;
+
+          formulario.style.display = 'none';
+          mensagemDiv.style.display = 'block';
+        });
+      } else {
+        console.error("Elemento 'comentarioForm' ou 'mensagem' não encontrado.");
+      }
+    });
+  </script>
 
 </body>
 

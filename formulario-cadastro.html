@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="/css/formulario-cadastro.css">
+    <link rel="stylesheet" href="/css/botao-fechar-form.css">
+    <script src="/js/formulario_cadastro.js" defer></script>
+</head>
+
+<body>
+    <div class="form-container">
+        <img src="/images/Logo-mais-vida.png" alt="Logo do site">
+    </div>
+    <div class="botao-fechar">
+        <button id="fecharFormulario" class="botao-fechar">&times;</button>
+    </div>
+
+    <form id="cadastroForm">
+        <h2 class="titulo-formulario">Cadastro newletter</h2>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+        <span id="nome-error" class="mensagem-erro"></span>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span id="email-error" class="mensagem-erro"></span>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha">
+        <span id="senha-error" class="mensagem-erro"></span>
+
+        <label for="confirmSenha">Confirme a Senha:</label>
+        <input type="password" id="confirmSenha" name="confirmSenha">
+        <span id="confirmSenha-error" class="mensagem-erro"></span>
+
+        <button type="submit">Cadastre-se</button>
+        <p><a href="./formulario-login.html" id="loginLink">Faça login</a></p> 
+    </form>
+    </div>
+</body>
+
+</html>
